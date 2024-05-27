@@ -7,3 +7,9 @@ class StringCalculator
     numbers.split(delimiter || /,|\\n/).map(&:to_i).sum # split the string with the delimiter found else split the string with , \n
   end
 end
+
+class NegativeError < StandardError
+  def initialize(error)
+    puts "negative numbers not allowed #{error.join(',')}"
+  end
+end
