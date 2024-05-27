@@ -1,5 +1,6 @@
 class StringCalculator
   def self.add(numbers)
-    numbers.split(',').map(&:to_i).sum
+    # Split the string using commas or newlines as delimiters
+    numbers.split(/,|\\n/).map(&:to_i).sum
   end
 end
