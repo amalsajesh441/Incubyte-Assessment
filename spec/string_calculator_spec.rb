@@ -12,4 +12,8 @@ RSpec.describe StringCalculator do
   it 'returns the actual sum' do
     expect(StringCalculator.add('1,2')).to eq(3)
   end
+
+  it 'should handle any amount of numbers' do
+    expect(StringCalculator.add('5,6,7,8')).to eq(26)
+  end
 end
